@@ -31,11 +31,13 @@ class MessagesController < ApplicationController
     def create
         begin
             @chat = Chat.find_by(chat_number: params[:chat_number])
-            @message = Message.create(message_params.merge(chat_id: @chat.id))
-            # TODO: Add Redis and messaging queue to increment message number and queue messages sent
-            if @message.save
-                render_success(data:@message, message:"Message Created", status: :created)
+            if ! @chat
+                render_error(message: "Resource Not Found", status: :not_found)
             end
+            @message_service = MessageService.new(@chat, message_params)
+            @message = @message_service.create_message
+            render_success(data:@message, message:"Message Created", status: :created)
+
         rescue ActionController::ParameterMissing => e
             render_error(data:e.message, message:'Validation Failure', status: :unprocessable_entity)
         rescue => e
@@ -44,7 +46,7 @@ class MessagesController < ApplicationController
     end
 
     def message_params
-        params.require(:message).permit(:body)
+        params.require(:message).permit(:body)[:body]
       end
 
     def search
