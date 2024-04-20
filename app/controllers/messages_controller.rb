@@ -6,10 +6,12 @@ class MessagesController < ApplicationController
             @application = Application.find_by(token: params[:application_token])
             if !@application
                 render_error(message: "Application Not Found", status: :not_found)
+                return
             end
             @chat = Chat.where(chat_number: params[:chat_chat_number],application_id: @application.id).first
             if !@chat
                 render_error(message: "Chat Not Found", status: :not_found)
+                return
             else
             @messages = Message.where(chat_id: @chat.id)
             render_success(data: MessageSerializer.only_attributes(@messages), message: "Messages", status: :ok)
@@ -25,6 +27,7 @@ class MessagesController < ApplicationController
             @message = Message.find_by(message_number: params[:message_number])
             if ! @message
                 render_error(message: "Message Not Found", status: :not_found)
+                return
             else
                 render_success(data: MessageSerializer.only_attributes([@message]), message: "Message Details", status: :ok)
             end

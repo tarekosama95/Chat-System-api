@@ -390,6 +390,78 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Application Retreived Successfully\",\n    \"data\": [\n        {\n            \"application_name\": \"wheeyy\",\n            \"application_token\": \"ca54f6e29971ab8f6345d1d71a54b63a\",\n            \"chats_count\": 13,\n            \"created_at\": \"2024-04-19T12:07:02.658Z\",\n            \"updated_at\": \"2024-04-20T16:37:41.672Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/7160796a3ca142e0988158d483965307",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"7160796a3ca142e0988158d483965307"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "b9bb5783-653c-4b15-9e3a-37ac9310bd81"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.055912"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.18, sql.active_record;dur=3.04, instantiation.active_record;dur=0.04, render.active_model_serializers;dur=0.18, process_action.action_controller;dur=8.88"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failure\",\n    \"message\": \"Application Not Found\",\n    \"data\": {}\n}"
 						}
 					]
 				},
@@ -575,6 +647,87 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Application Updated Successfully\",\n    \"data\": [\n        {\n            \"application_name\": \"wheeyy\",\n            \"application_token\": \"ca54f6e29971ab8f6345d1d71a54b63a\",\n            \"created_at\": \"2024-04-19T12:07:02.658Z\",\n            \"updated_at\": \"2024-04-20T16:37:41.672Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Updating app\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/applications/7160796a3ca142e0988158d483965307",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"7160796a3ca142e0988158d483965307"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "22cb4d6e-ba7a-43f7-9ac6-d414a65023df"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.010270"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.02, sql.active_record;dur=0.53, instantiation.active_record;dur=0.02, render.active_model_serializers;dur=0.04, process_action.action_controller;dur=5.14"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failure\",\n    \"message\": \"Application Not Found\",\n    \"data\": {}\n}"
 						}
 					]
 				}
@@ -681,6 +834,156 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Messages\",\n    \"data\": [\n        {\n            \"message_number\": 1,\n            \"body\": \"New Message\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T04:17:02.680Z\",\n            \"updated_at\": \"2024-04-20T04:17:02.680Z\"\n        },\n        {\n            \"message_number\": 2,\n            \"body\": \"New Message\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T05:07:59.502Z\",\n            \"updated_at\": \"2024-04-20T05:07:59.502Z\"\n        },\n        {\n            \"message_number\": 3,\n            \"body\": \"New Message#2\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T05:09:18.129Z\",\n            \"updated_at\": \"2024-04-20T05:09:18.129Z\"\n        },\n        {\n            \"message_number\": 4,\n            \"body\": \"Hello\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:53:50.717Z\",\n            \"updated_at\": \"2024-04-20T06:53:50.717Z\"\n        },\n        {\n            \"message_number\": 5,\n            \"body\": \"Hello\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:54:34.134Z\",\n            \"updated_at\": \"2024-04-20T06:54:34.134Z\"\n        },\n        {\n            \"message_number\": 6,\n            \"body\": null,\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:57:04.517Z\",\n            \"updated_at\": \"2024-04-20T06:57:04.517Z\"\n        },\n        {\n            \"message_number\": 7,\n            \"body\": null,\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:57:12.857Z\",\n            \"updated_at\": \"2024-04-20T06:57:12.857Z\"\n        },\n        {\n            \"message_number\": 8,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:59:24.220Z\",\n            \"updated_at\": \"2024-04-20T06:59:24.220Z\"\n        },\n        {\n            \"message_number\": 9,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T07:02:55.921Z\",\n            \"updated_at\": \"2024-04-20T07:02:55.921Z\"\n        },\n        {\n            \"message_number\": 10,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T07:59:52.977Z\",\n            \"updated_at\": \"2024-04-20T07:59:52.977Z\"\n        },\n        {\n            \"message_number\": 11,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T12:48:48.987Z\",\n            \"updated_at\": \"2024-04-20T12:48:48.987Z\"\n        },\n        {\n            \"message_number\": 12,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T15:17:44.611Z\",\n            \"updated_at\": \"2024-04-20T15:17:44.611Z\"\n        },\n        {\n            \"message_number\": 13,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:07:18.810Z\",\n            \"updated_at\": \"2024-04-20T17:07:18.810Z\"\n        },\n        {\n            \"message_number\": 14,\n            \"body\": \"Hi How's it going\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:07:32.279Z\",\n            \"updated_at\": \"2024-04-20T17:07:32.279Z\"\n        },\n        {\n            \"message_number\": 15,\n            \"body\": \"Doing Good thanks\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:07:44.073Z\",\n            \"updated_at\": \"2024-04-20T17:07:44.073Z\"\n        },\n        {\n            \"message_number\": 16,\n            \"body\": \"hiya there\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:13:05.161Z\",\n            \"updated_at\": \"2024-04-20T17:13:05.161Z\"\n        },\n        {\n            \"message_number\": 17,\n            \"body\": \"hiya there\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:16:49.226Z\",\n            \"updated_at\": \"2024-04-20T17:16:49.226Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "404 chat",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}/chats/20/messages",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}",
+										"chats",
+										"20",
+										"messages"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "395cdeab-fb85-43c9-8480-5801df93184a"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.020356"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.03, sql.active_record;dur=3.04, instantiation.active_record;dur=0.06, render.active_model_serializers;dur=0.04, process_action.action_controller;dur=7.39"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failure\",\n    \"message\": \"Chat Not Found\",\n    \"data\": {}\n}"
+						},
+						{
+							"name": "404 application",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/15/chats/{{chat_number}}/messages",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"15",
+										"chats",
+										"{{chat_number}}",
+										"messages"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "bc8f20ef-66c6-4212-b234-e694663a80f7"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.094505"
+								},
+								{
+									"key": "server-timing",
+									"value": "sql.active_record;dur=17.74, start_processing.action_controller;dur=0.01, instantiation.active_record;dur=0.01, render.active_model_serializers;dur=0.08, process_action.action_controller;dur=26.89"
+								},
+								{
+									"key": "Content-Length",
+									"value": "64"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failure\",\n    \"message\": \"Application Not Found\",\n    \"data\": {}\n}"
 						}
 					]
 				},

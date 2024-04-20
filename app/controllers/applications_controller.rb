@@ -32,6 +32,7 @@ class ApplicationsController < ApplicationController
         @application = Application.find_by(token: params[:token])
         if ! @application
             render_error(message:"Application Not Found", status: :not_found)
+            return
         else
             render_success(data:ApplicationSerializer.only_attributes([@application]),message:'Application Retreived Successfully', status: :ok)
         end
@@ -46,6 +47,7 @@ class ApplicationsController < ApplicationController
             @application = Application.find_by(token: params[:token])
             if ! @application
                 render_error(message:"Application Not Found", status: :not_found)
+                return
             else
                 if @application.update(name: application_params[:name])
                 render_success(data:ApplicationSerializer.only_attributes([@application]),message:'Application Updated Successfully', status: :ok)

@@ -6,6 +6,7 @@ class ChatsController < ApplicationController
             @application = Application.find_by(token: params[:application_token])
             if ! @application
                render_error(data: @application, message:"Application Not Found", status: :not_found)
+               return
             else
                 @chats = Chat.where(application_id: @application.id)
                 render_success(data: ChatSerializer.only_attributes(@chats), message: "Chats", status: :ok)
