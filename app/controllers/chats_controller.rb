@@ -1,4 +1,5 @@
 class ChatsController < ApplicationController
+    require 'redis'
     include ApiResponse
 
     def index
@@ -21,7 +22,8 @@ class ChatsController < ApplicationController
             if ! @application
                render_error(data: @application, message:"Resource Not Found", status: :not_found)
             else
-            @chat = Chat.create(application_id: @application.id)
+            @chat_service = ChatService.new(@application)
+            @chat = @chat_service.create_chat
             render_success(data:@chat, message: "Chat Room Created", status: :created)
             end
             rescue => e
@@ -42,4 +44,8 @@ class ChatsController < ApplicationController
                 render_bad_request(data:e.message, message: "Sth went wrong", status: :bad_request)
             end
         end
+
+    def redis
+        @redis ||=Redis.new
+    end
 end

@@ -7,7 +7,7 @@ class MessageSearch
             query:{
                 bool:{
                     must:[
-                        {match: {chat_id: @search_param}}
+                        {match: {chat_id: @search_param}},
                         {wildcard: {body: "*#@search_param*"}}
                     ]
                 }
