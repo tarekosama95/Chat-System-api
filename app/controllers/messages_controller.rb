@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
             if !@chat
                 render_error(message: "Resource Not Found", status: :not_found)
             else
-            @messages = Message.where(chat_id: params[:chat_id])
+            @messages = Message.where(chat_id: @chat.id)
             render_success(data: @messages, message: "Messages", status: :ok)
             end
             rescue => e
@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
 
     def show
         begin
-            @message = Application::find_by(params: [:message_number])
+            @message = Message.find_by(params: [:message_number])
             if ! @message
                 render_error(message: "Resource Not Found", status: :not_found)
             else
@@ -30,7 +30,8 @@ class MessagesController < ApplicationController
 
     def create
         begin
-            @message = Message.create(message_params)
+            @chat = Chat.find_by(chat_number: params[:chat_number])
+            @message = Message.create(message_params.merge(chat_id: @chat.id))
             # TODO: Add Redis and messaging queue to increment message number and queue messages sent
             if @message.save
                 render_success(data:@message, message:"Message Created", status: :created)
