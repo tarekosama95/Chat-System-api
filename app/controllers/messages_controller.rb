@@ -39,10 +39,12 @@ class MessagesController < ApplicationController
             @application = Application.find_by(token: params[:application_token])
             if ! @application
                 render_error(message: "Application Not Found", status: :not_found)
+                return
             end
-            @chat = Chat.where(chat_number: params[:chat_number], application_id: @application.id).first
+            @chat = Chat.where(chat_number: params[:chat_chat_number], application_id: @application.id).first
             if ! @chat
-                render_error(message: "Chat Not Found", status: :not_found)
+                  render_error(message: "Chat Not Found", status: :not_found)
+                  return
             end
             @message_service = MessageService.new(@chat, message_params)
             @message = @message_service.create_message
