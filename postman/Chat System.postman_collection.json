@@ -1,0 +1,1379 @@
+{
+	"info": {
+		"_postman_id": "e5332256-7521-466b-828b-b0d6caf7e798",
+		"name": "Chat System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16899102"
+	},
+	"item": [
+		{
+			"name": "Applications",
+			"item": [
+				{
+					"name": "List Applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/applications",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"2fe298e47eb95ab7ac78fc47856d7ee7\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "cc258c74-36b0-4d20-8c2f-d1c3663666c3"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.017024"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.03, sql.active_record;dur=1.19, instantiation.active_record;dur=0.08, render.active_model_serializers;dur=0.40, process_action.action_controller;dur=4.60"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2284"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Applications\",\n    \"data\": [\n        {\n            \"application_name\": \"wheey\",\n            \"application_token\": \"edaa0fddf8de3b692f6209df51188dbd\",\n            \"chats_count\": 12,\n            \"created_at\": \"2024-04-19T06:31:30.131Z\",\n            \"updated_at\": \"2024-04-20T16:34:32.113Z\"\n        },\n        {\n            \"application_name\": \"First Chat Application\",\n            \"application_token\": \"3ef91c49d954b9c9d6caf265dbca8b7b\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-19T11:16:38.384Z\",\n            \"updated_at\": \"2024-04-19T11:16:38.384Z\"\n        },\n        {\n            \"application_name\": \"wheeyy\",\n            \"application_token\": \"ca54f6e29971ab8f6345d1d71a54b63a\",\n            \"chats_count\": 13,\n            \"created_at\": \"2024-04-19T12:07:02.658Z\",\n            \"updated_at\": \"2024-04-20T16:37:41.672Z\"\n        },\n        {\n            \"application_name\": \"Second2 Chat Application\",\n            \"application_token\": \"10b764918e98f39e8c9667c00862c439\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-19T12:12:16.232Z\",\n            \"updated_at\": \"2024-04-19T12:12:16.232Z\"\n        },\n        {\n            \"application_name\": \"Chat App#1\",\n            \"application_token\": \"bf24d2b6cff2908d6c084101eaf13f68\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-19T12:24:57.930Z\",\n            \"updated_at\": \"2024-04-19T12:24:57.930Z\"\n        },\n        {\n            \"application_name\": \"Chat App#2\",\n            \"application_token\": \"4b47b6db6f1d871c26189355bac6ed4c\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-19T17:16:52.888Z\",\n            \"updated_at\": \"2024-04-19T17:16:52.888Z\"\n        },\n        {\n            \"application_name\": \"Chat App#3\",\n            \"application_token\": \"e461c4cf178b873457fba1dd54e8aafb\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-20T13:24:46.807Z\",\n            \"updated_at\": \"2024-04-20T13:24:46.807Z\"\n        },\n        {\n            \"application_name\": \"Chat App#4\",\n            \"application_token\": \"1cf355c6fa8c6c3556f02927f4e7852b\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-20T13:25:13.512Z\",\n            \"updated_at\": \"2024-04-20T13:25:13.512Z\"\n        },\n        {\n            \"application_name\": \"Chat App#5\",\n            \"application_token\": \"b88fa25f48286c763ed8a013b3510915\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-20T13:26:14.506Z\",\n            \"updated_at\": \"2024-04-20T13:26:14.506Z\"\n        },\n        {\n            \"application_name\": \"Chat App#6\",\n            \"application_token\": \"9008ef686b5fdb370f8411d673aad7b7\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-20T13:26:57.889Z\",\n            \"updated_at\": \"2024-04-20T13:26:57.889Z\"\n        },\n        {\n            \"application_name\": \"Chat App#7\",\n            \"application_token\": \"8055b901070eae01c9bbfaa4d17fd0be\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-20T16:07:28.745Z\",\n            \"updated_at\": \"2024-04-20T16:07:28.745Z\"\n        },\n        {\n            \"application_name\": \"Friend\",\n            \"application_token\": \"133102fcf57d6d97905b849b0c289efe\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-20T16:50:29.539Z\",\n            \"updated_at\": \"2024-04-20T16:50:29.539Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Application",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Chat App#6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/applications/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "422",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										""
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "5410b744-52f0-4e2a-a195-1100cf85f2dc"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.004696"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.01, render.active_model_serializers;dur=0.03, process_action.action_controller;dur=0.97"
+								},
+								{
+									"key": "Content-Length",
+									"value": "112"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failure\",\n    \"message\": \"Validation Failure\",\n    \"data\": \"param is missing or the value is empty: application\"\n}"
+						},
+						{
+							"name": "201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Bestie\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/applications/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"92fa28631d7ffbd1c2c24ba2b025ccfb\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "0f89b062-655c-4490-a925-33dca98d137f"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.038037"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=15.21, transaction.active_record;dur=21.21, render.active_model_serializers;dur=0.38, process_action.action_controller;dur=34.50"
+								},
+								{
+									"key": "Content-Length",
+									"value": "255"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"created\",\n    \"message\": \"Application Created Successfully\",\n    \"data\": [\n        {\n            \"application_name\": \"Bestie\",\n            \"application_token\": \"79fce3a1b6260404371f7734ccc10e52\",\n            \"chats_count\": 0,\n            \"created_at\": \"2024-04-20T17:18:52.160Z\",\n            \"updated_at\": \"2024-04-20T17:18:52.160Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "View Application By Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/applications/{{application_token}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								"{{application_token}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"8228a4cfbef7dd0801e02585f6fa84ba\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "b8af8d83-81dc-4d34-934a-97b5faac8879"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.056917"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.10, sql.active_record;dur=4.60, instantiation.active_record;dur=0.53, render.active_model_serializers;dur=3.23, process_action.action_controller;dur=27.87"
+								},
+								{
+									"key": "Content-Length",
+									"value": "253"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Application Retreived Successfully\",\n    \"data\": [\n        {\n            \"application_name\": \"wheeyy\",\n            \"application_token\": \"ca54f6e29971ab8f6345d1d71a54b63a\",\n            \"chats_count\": 13,\n            \"created_at\": \"2024-04-19T12:07:02.658Z\",\n            \"updated_at\": \"2024-04-20T16:37:41.672Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Application",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"wheeyy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/applications/{{application_token}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								"{{application_token}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "422",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "x-request-id",
+									"value": "5410b744-52f0-4e2a-a195-1100cf85f2dc"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.004696"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.01, render.active_model_serializers;dur=0.03, process_action.action_controller;dur=0.97"
+								},
+								{
+									"key": "Content-Length",
+									"value": "112"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"failure\",\n    \"message\": \"Validation Failure\",\n    \"data\": \"param is missing or the value is empty: application\"\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"wheeyy\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"074436026f2eaf7d8af8ab070916e16e\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "05c1f4a1-fb74-48fa-90cd-da81f7b13405"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.234016"
+								},
+								{
+									"key": "server-timing",
+									"value": "sql.active_record;dur=29.28, start_processing.action_controller;dur=0.00, instantiation.active_record;dur=22.82, transaction.active_record;dur=10.87, render.active_model_serializers;dur=0.13, process_action.action_controller;dur=52.24"
+								},
+								{
+									"key": "Content-Length",
+									"value": "234"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Application Updated Successfully\",\n    \"data\": [\n        {\n            \"application_name\": \"wheeyy\",\n            \"application_token\": \"ca54f6e29971ab8f6345d1d71a54b63a\",\n            \"created_at\": \"2024-04-19T12:07:02.658Z\",\n            \"updated_at\": \"2024-04-20T16:37:41.672Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Messages by chat no.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/applications/{{application_token}}/chats/{{chat_number}}/messages",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								"{{application_token}}",
+								"chats",
+								"{{chat_number}}",
+								"messages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}/chats/1/messages",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}",
+										"chats",
+										"1",
+										"messages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"6b4cd4d35c979cb261b63d91946579f2\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "3087510f-1df4-4361-95a8-13da76e05418"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.153923"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.06, sql.active_record;dur=5.46, instantiation.active_record;dur=3.45, render.active_model_serializers;dur=1.13, process_action.action_controller;dur=134.16"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2839"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Messages\",\n    \"data\": [\n        {\n            \"message_number\": 1,\n            \"body\": \"New Message\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T04:17:02.680Z\",\n            \"updated_at\": \"2024-04-20T04:17:02.680Z\"\n        },\n        {\n            \"message_number\": 2,\n            \"body\": \"New Message\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T05:07:59.502Z\",\n            \"updated_at\": \"2024-04-20T05:07:59.502Z\"\n        },\n        {\n            \"message_number\": 3,\n            \"body\": \"New Message#2\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T05:09:18.129Z\",\n            \"updated_at\": \"2024-04-20T05:09:18.129Z\"\n        },\n        {\n            \"message_number\": 4,\n            \"body\": \"Hello\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:53:50.717Z\",\n            \"updated_at\": \"2024-04-20T06:53:50.717Z\"\n        },\n        {\n            \"message_number\": 5,\n            \"body\": \"Hello\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:54:34.134Z\",\n            \"updated_at\": \"2024-04-20T06:54:34.134Z\"\n        },\n        {\n            \"message_number\": 6,\n            \"body\": null,\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:57:04.517Z\",\n            \"updated_at\": \"2024-04-20T06:57:04.517Z\"\n        },\n        {\n            \"message_number\": 7,\n            \"body\": null,\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:57:12.857Z\",\n            \"updated_at\": \"2024-04-20T06:57:12.857Z\"\n        },\n        {\n            \"message_number\": 8,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:59:24.220Z\",\n            \"updated_at\": \"2024-04-20T06:59:24.220Z\"\n        },\n        {\n            \"message_number\": 9,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T07:02:55.921Z\",\n            \"updated_at\": \"2024-04-20T07:02:55.921Z\"\n        },\n        {\n            \"message_number\": 10,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T07:59:52.977Z\",\n            \"updated_at\": \"2024-04-20T07:59:52.977Z\"\n        },\n        {\n            \"message_number\": 11,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T12:48:48.987Z\",\n            \"updated_at\": \"2024-04-20T12:48:48.987Z\"\n        },\n        {\n            \"message_number\": 12,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T15:17:44.611Z\",\n            \"updated_at\": \"2024-04-20T15:17:44.611Z\"\n        },\n        {\n            \"message_number\": 13,\n            \"body\": \"Helloooo\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:07:18.810Z\",\n            \"updated_at\": \"2024-04-20T17:07:18.810Z\"\n        },\n        {\n            \"message_number\": 14,\n            \"body\": \"Hi How's it going\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:07:32.279Z\",\n            \"updated_at\": \"2024-04-20T17:07:32.279Z\"\n        },\n        {\n            \"message_number\": 15,\n            \"body\": \"Doing Good thanks\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:07:44.073Z\",\n            \"updated_at\": \"2024-04-20T17:07:44.073Z\"\n        },\n        {\n            \"message_number\": 16,\n            \"body\": \"hiya there\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:13:05.161Z\",\n            \"updated_at\": \"2024-04-20T17:13:05.161Z\"\n        },\n        {\n            \"message_number\": 17,\n            \"body\": \"hiya there\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:16:49.226Z\",\n            \"updated_at\": \"2024-04-20T17:16:49.226Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "View Message",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/applications/{{application_token}}/chats/{{chat_number}}/messages/{{message_number}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								"{{application_token}}",
+								"chats",
+								"{{chat_number}}",
+								"messages",
+								"{{message_number}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}/chats/1/messages/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}",
+										"chats",
+										"1",
+										"messages",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"de66cfb03057a8477471d39b12f92e06\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "cdf4e1d0-0023-4042-a52d-5a52d669f18f"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.010832"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=1.66, instantiation.active_record;dur=0.25, render.active_model_serializers;dur=0.11, process_action.action_controller;dur=6.64"
+								},
+								{
+									"key": "Content-Length",
+									"value": "218"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Message Details\",\n    \"data\": [\n        {\n            \"message_number\": 1,\n            \"body\": \"New Message\",\n            \"chat_number\": 1,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T04:17:02.680Z\",\n            \"updated_at\": \"2024-04-20T04:17:02.680Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Search For Message",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/applications/{{application_token}}/chats/{{chat_number}}/messages/search?search_term=hell",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								"{{application_token}}",
+								"chats",
+								"{{chat_number}}",
+								"messages",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search_term",
+									"value": "hell"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}/chats/1/messages/search?search_term=hell",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}",
+										"chats",
+										"1",
+										"messages",
+										"search"
+									],
+									"query": [
+										{
+											"key": "search_term",
+											"value": "hell"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"f06958c01f1fb9864ba11cd43446c38a\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "5b38fb45-2770-441d-a76f-6a6b65e56fcc"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.456017"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.08, sql.active_record;dur=7.50, instantiation.active_record;dur=0.78, render.active_model_serializers;dur=0.31, process_action.action_controller;dur=437.94"
+								},
+								{
+									"key": "Content-Length",
+									"value": "383"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Search Results\",\n    \"data\": [\n        {\n            \"message_number\": 1,\n            \"body\": \"Helloooo\",\n            \"chat_number\": null,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T12:48:48.987Z\",\n            \"updated_at\": \"2024-04-20T12:48:48.987Z\"\n        },\n        {\n            \"message_number\": 3,\n            \"body\": \"Helloooo\",\n            \"chat_number\": null,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:07:18.810Z\",\n            \"updated_at\": \"2024-04-20T17:07:18.810Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"body\":\"hiya there\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/applications/{{application_token}}/chats/{{chat_number}}/messages",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								"{{application_token}}",
+								"chats",
+								"{{chat_number}}",
+								"messages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"body\":\"hiya there\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}/chats/1/messages",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}",
+										"chats",
+										"1",
+										"messages"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"bb2c52af28e73a792bea2aba05d79352\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "b654946f-3234-4990-bbb8-2ad2a4d624b6"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.119985"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.07, sql.active_record;dur=15.10, instantiation.active_record;dur=0.15, transaction.active_record;dur=11.70, render.active_model_serializers;dur=0.10, process_action.action_controller;dur=97.78"
+								},
+								{
+									"key": "Content-Length",
+									"value": "225"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"created\",\n    \"message\": \"Message Created\",\n    \"data\": [\n        {\n            \"message_number\": 7,\n            \"body\": \"hiya there\",\n            \"chat_number\": null,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:16:49.226Z\",\n            \"updated_at\": \"2024-04-20T17:16:49.226Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Chats",
+			"item": [
+				{
+					"name": "Chats By Application Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/applications/{{application_token}}/chats",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								"{{application_token}}",
+								"chats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}/chats",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}",
+										"chats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"4463a908279f9ffa6794ab1f70b6722c\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "c5690e2f-73f9-4572-82f0-2990cef17ca1"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.072043"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.11, sql.active_record;dur=3.67, instantiation.active_record;dur=1.78, render.active_model_serializers;dur=0.82, process_action.action_controller;dur=49.44"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2078"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Chats\",\n    \"data\": [\n        {\n            \"chat_number\": 1,\n            \"messages_count\": 17,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T03:35:19.649Z\",\n            \"updated_at\": \"2024-04-20T17:08:06.538Z\"\n        },\n        {\n            \"chat_number\": 2,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T05:12:36.737Z\",\n            \"updated_at\": \"2024-04-20T05:12:36.737Z\"\n        },\n        {\n            \"chat_number\": 3,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T05:12:52.298Z\",\n            \"updated_at\": \"2024-04-20T05:12:52.298Z\"\n        },\n        {\n            \"chat_number\": 4,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T05:53:38.306Z\",\n            \"updated_at\": \"2024-04-20T05:53:38.306Z\"\n        },\n        {\n            \"chat_number\": 5,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T05:53:47.664Z\",\n            \"updated_at\": \"2024-04-20T05:53:47.664Z\"\n        },\n        {\n            \"chat_number\": 6,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:53:37.342Z\",\n            \"updated_at\": \"2024-04-20T06:53:37.342Z\"\n        },\n        {\n            \"chat_number\": 7,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T06:54:29.281Z\",\n            \"updated_at\": \"2024-04-20T06:54:29.281Z\"\n        },\n        {\n            \"chat_number\": 8,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T14:58:05.104Z\",\n            \"updated_at\": \"2024-04-20T14:58:05.104Z\"\n        },\n        {\n            \"chat_number\": 9,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T14:58:19.455Z\",\n            \"updated_at\": \"2024-04-20T14:58:19.455Z\"\n        },\n        {\n            \"chat_number\": 10,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T14:59:34.075Z\",\n            \"updated_at\": \"2024-04-20T14:59:34.075Z\"\n        },\n        {\n            \"chat_number\": 11,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T14:59:48.300Z\",\n            \"updated_at\": \"2024-04-20T14:59:48.300Z\"\n        },\n        {\n            \"chat_number\": 12,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T15:00:09.066Z\",\n            \"updated_at\": \"2024-04-20T15:00:09.066Z\"\n        },\n        {\n            \"chat_number\": 13,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T15:00:45.291Z\",\n            \"updated_at\": \"2024-04-20T15:00:45.291Z\"\n        },\n        {\n            \"chat_number\": 14,\n            \"messages_count\": 0,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T17:19:33.079Z\",\n            \"updated_at\": \"2024-04-20T17:19:33.079Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/applications/{{application_token}}/chats",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								"{{application_token}}",
+								"chats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}/chats",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}",
+										"chats"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ca3720fd8d3f2d89a385cfdba10ff8d5\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "0d9cd41f-3cbc-4e8c-9662-0449d10f4eca"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.180906"
+								},
+								{
+									"key": "server-timing",
+									"value": "sql.active_record;dur=15.42, start_processing.action_controller;dur=0.01, instantiation.active_record;dur=22.58, transaction.active_record;dur=7.88, render.active_model_serializers;dur=0.14, process_action.action_controller;dur=73.42"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"created\",\n    \"message\": \"Chat Room Created\",\n    \"data\": [\n        {\n            \"chat_number\": 1,\n            \"messages_count\": 0,\n            \"application_name\": \"Friend\",\n            \"created_at\": \"2024-04-20T17:06:13.462Z\",\n            \"updated_at\": \"2024-04-20T17:06:13.462Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "View Chat By Chat Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/applications/{{application_token}}/chats/{{chat_number}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"applications",
+								"{{application_token}}",
+								"chats",
+								"{{chat_number}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/applications/{{application_token}}/chats/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"applications",
+										"{{application_token}}",
+										"chats",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "0"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-permitted-cross-domain-policies",
+									"value": "none"
+								},
+								{
+									"key": "referrer-policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "Accept"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"6f76f26b08cb09a08c238a4f0e715691\""
+								},
+								{
+									"key": "cache-control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "x-request-id",
+									"value": "447ca2fb-e761-4035-a5fc-830cc2deeb4d"
+								},
+								{
+									"key": "x-runtime",
+									"value": "0.013656"
+								},
+								{
+									"key": "server-timing",
+									"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=1.77, instantiation.active_record;dur=0.09, render.active_model_serializers;dur=0.09, process_action.action_controller;dur=6.35"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"message\": \"Chat\",\n    \"data\": [\n        {\n            \"chat_number\": 1,\n            \"messages_count\": 17,\n            \"application_name\": \"wheeyy\",\n            \"created_at\": \"2024-04-20T03:35:19.649Z\",\n            \"updated_at\": \"2024-04-20T17:08:06.538Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "application_token",
+			"value": "ca54f6e29971ab8f6345d1d71a54b63a",
+			"type": "string"
+		},
+		{
+			"key": "chat_number",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "message_number",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
