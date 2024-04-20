@@ -1,5 +1,44 @@
 version: "3"
 services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+  sidekiq:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sidekiq
+    command: bundle exec sidekiq
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+      - mysql
+      - elasticsearch
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_URL: redis://redis:6379/0
+      REDIS_DB: 0
+      MYSQL_DATABASE: chat_api_development
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_HOST: mysql
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.2
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
   db:
     image: mysql:latest
     environment:
@@ -13,12 +52,17 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     depends_on:
       - db
-    command: "./bin/rails server"
+      - redis
+      - sidekiq
+      - elasticsearch
+    command: "./bin/rails server -b 0.0.0.0"
     environment:
       - RAILS_ENV=development
       - MYSQL_USER=user
@@ -29,3 +73,5 @@ services:
 volumes:
   mysql_data:
   app-storage:
+  esdata:
+  redis_data:

@@ -50,5 +50,19 @@ class MessagesController < ApplicationController
       end
 
     def search
+        begin
+                @application = Application.find_by(token: params[:application_token])
+                if @application
+                    @chats = Chat.where(application_id: @application.id)
+                    if @chats
+                    @messages = Message.search(params[:search_term])
+                    end
+                end
+                render_success(data:@messages, message: "Search Results", status: :ok)
+        rescue => e
+            puts e
+            Rails.logger.info "Error #{e.message}"
+            render_bad_request(data:e.full_message, message:'Something Went Wrong, Please Try Again Later')
+        end
     end
 end

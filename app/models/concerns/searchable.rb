@@ -1,8 +1,6 @@
-class Message < ApplicationRecord
+module Searchable
     include Elasticsearch::Model
     include Elasticsearch::Model::Callbacks
-    belongs_to :chat
-
     mapping do
         indexes :body, type: :text, analyzer: 'english'
     end
@@ -10,10 +8,10 @@ class Message < ApplicationRecord
     def self.search(query)
         params = {
           query: {
-            wildcard: {
-             body:{
-                value: "*#{query}*"
-             }
+            multi_match: {
+              query: query,
+              fields: ['body'],
+              fuzziness: "AUTO"
             }
           }
         }
